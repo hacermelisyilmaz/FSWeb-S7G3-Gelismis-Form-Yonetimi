@@ -46,8 +46,9 @@ function FormComponent({ pAddUser }) {
     <div className="Form" onSubmit={submitHandler}>
       <Form>
         <FormGroup>
-          <Label>İsim</Label>
+          <Label htmlFor="user-name">İsim</Label>
           <Input
+            id="user-name"
             name="name"
             placeholder="İsim ve soyisminizi girin"
             onChange={changeHandler}
@@ -55,8 +56,9 @@ function FormComponent({ pAddUser }) {
           ></Input>
         </FormGroup>
         <FormGroup>
-          <Label>E-mail</Label>
+          <Label htmlFor="user-email">E-mail</Label>
           <Input
+            id="user-email"
             name="email"
             placeholder="E-mailinizi girin"
             type="email"
@@ -65,8 +67,9 @@ function FormComponent({ pAddUser }) {
           ></Input>
         </FormGroup>
         <FormGroup>
-          <Label>Şifre</Label>
+          <Label htmlFor="user-password">Şifre</Label>
           <Input
+            id="user-password"
             name="password"
             placeholder="Şifrenizi girin"
             type="password"
@@ -76,12 +79,15 @@ function FormComponent({ pAddUser }) {
         </FormGroup>
         <FormGroup check>
           <Input
+            id="user-terms"
             name="terms"
             type="checkbox"
             onChange={changeHandler}
             checked={!!formData.terms}
           ></Input>
-          <Label>Kullanım şartlarını okudum, kabul ediyorum.</Label>
+          <Label htmlFor="user-terms">
+            Kullanım şartlarını okudum, kabul ediyorum.
+          </Label>
         </FormGroup>
         <FormGroup>
           <Button type="submit">Submit</Button>
