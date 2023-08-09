@@ -12,6 +12,20 @@ function FormComponent() {
 
   const [formData, setFormData] = useState();
 
+  const formSchema = Yup.object().shape({
+    name: Yup.string(),
+    email: Yup.string()
+      .email("Lütfen geçerli bir mail adresi girin.")
+      .required("Bir mail adresi girmelisiniz."),
+    password: Yup.string()
+      .required("Lütfen şifrenizi girin.")
+      .min(4, "Şifreniz en az 4 karakterden oluşmalıdır."),
+    terms: Yup.boolean().oneOf(
+      [true],
+      "Lütfen kullanım koşullarını okuyup kabul edin."
+    ),
+  });
+
   return (
     <div className="Form">
       <Form>
