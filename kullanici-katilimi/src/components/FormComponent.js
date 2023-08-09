@@ -35,7 +35,10 @@ function FormComponent() {
             type="password"
           ></Input>
         </FormGroup>
-        <FormGroup></FormGroup>
+        <FormGroup check>
+          <Input name="terms" type="checkbox"></Input>
+          <Label>Kullanım şartlarını okudum, kabul ediyorum.</Label>
+        </FormGroup>
         <FormGroup></FormGroup>
       </Form>
     </div>
