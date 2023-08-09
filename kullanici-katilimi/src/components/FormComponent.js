@@ -21,6 +21,11 @@ function FormComponent() {
     });
   };
 
+  const submitHandler = (event) => {
+    event.preventDefault();
+    setFormData(emptyForm);
+  };
+
   const formSchema = Yup.object().shape({
     name: Yup.string(),
     email: Yup.string()
@@ -36,7 +41,7 @@ function FormComponent() {
   });
 
   return (
-    <div className="Form">
+    <div className="Form" onSubmit={submitHandler}>
       <Form>
         <FormGroup>
           <Label>İsim</Label>
