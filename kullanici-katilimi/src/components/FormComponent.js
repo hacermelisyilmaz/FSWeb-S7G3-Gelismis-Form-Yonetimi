@@ -11,6 +11,7 @@ function FormComponent() {
   };
 
   const [formData, setFormData] = useState(emptyForm);
+  const [formErrors, setFormErrors] = useState(emptyForm);
 
   const formSchema = Yup.object().shape({
     name: Yup.string(),
