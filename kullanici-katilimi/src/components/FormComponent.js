@@ -1,5 +1,6 @@
 import * as Yup from "yup";
 import { Form } from "reactstrap";
+import { useState } from "react";
 
 function FormComponent() {
   const emptyForm = {
@@ -8,6 +9,8 @@ function FormComponent() {
     password: "",
     terms: "",
   };
+
+  const [formData, setFormData] = useState();
 
   return (
     <div className="Form">
