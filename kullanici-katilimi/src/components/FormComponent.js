@@ -27,7 +27,14 @@ function FormComponent() {
             type="email"
           ></Input>
         </FormGroup>
-        <FormGroup></FormGroup>
+        <FormGroup>
+          <Label>Şifre</Label>
+          <Input
+            name="password"
+            placeholder="Şifrenizi girin"
+            type="password"
+          ></Input>
+        </FormGroup>
         <FormGroup></FormGroup>
         <FormGroup></FormGroup>
       </Form>
