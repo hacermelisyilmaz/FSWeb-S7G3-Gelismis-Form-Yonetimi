@@ -19,7 +19,14 @@ function FormComponent() {
           <Label>İsim</Label>
           <Input name="name" placeholder="İsim ve soyisminizi girin"></Input>
         </FormGroup>
-        <FormGroup></FormGroup>
+        <FormGroup>
+          <Label>E-mail</Label>
+          <Input
+            name="email"
+            placeholder="E-mailinizi girin"
+            type="email"
+          ></Input>
+        </FormGroup>
         <FormGroup></FormGroup>
         <FormGroup></FormGroup>
         <FormGroup></FormGroup>
