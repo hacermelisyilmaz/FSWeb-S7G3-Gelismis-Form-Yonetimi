@@ -10,7 +10,7 @@ function FormComponent() {
     terms: "",
   };
 
-  const [formData, setFormData] = useState();
+  const [formData, setFormData] = useState(emptyForm);
 
   const formSchema = Yup.object().shape({
     name: Yup.string(),
