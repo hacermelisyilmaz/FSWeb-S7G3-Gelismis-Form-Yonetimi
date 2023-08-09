@@ -77,7 +77,7 @@ function FormComponent() {
           <Label>Kullanım şartlarını okudum, kabul ediyorum.</Label>
         </FormGroup>
         <FormGroup>
-          <Button>Submit</Button>
+          <Button type="submit">Submit</Button>
         </FormGroup>
       </Form>
     </div>
