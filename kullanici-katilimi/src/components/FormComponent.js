@@ -1,5 +1,5 @@
 import * as Yup from "yup";
-import { Form, FormGroup, Input, Label } from "reactstrap";
+import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import { useState } from "react";
 
 function FormComponent() {
@@ -39,7 +39,9 @@ function FormComponent() {
           <Input name="terms" type="checkbox"></Input>
           <Label>Kullanım şartlarını okudum, kabul ediyorum.</Label>
         </FormGroup>
-        <FormGroup></FormGroup>
+        <FormGroup>
+          <Button>Submit</Button>
+        </FormGroup>
       </Form>
     </div>
   );
