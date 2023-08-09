@@ -1,5 +1,5 @@
 import * as Yup from "yup";
-import { Form, FormGroup } from "reactstrap";
+import { Form, FormGroup, Input, Label } from "reactstrap";
 import { useState } from "react";
 
 function FormComponent() {
@@ -15,7 +15,10 @@ function FormComponent() {
   return (
     <div className="Form">
       <Form>
-        <FormGroup></FormGroup>
+        <FormGroup>
+          <Label>İsim</Label>
+          <Input name="name" placeholder="İsim ve soyisminizi girin"></Input>
+        </FormGroup>
         <FormGroup></FormGroup>
         <FormGroup></FormGroup>
         <FormGroup></FormGroup>
