@@ -1,5 +1,5 @@
 import * as Yup from "yup";
-import { Form } from "reactstrap";
+import { Form, FormGroup } from "reactstrap";
 import { useState } from "react";
 
 function FormComponent() {
@@ -14,7 +14,13 @@ function FormComponent() {
 
   return (
     <div className="Form">
-      <Form></Form>
+      <Form>
+        <FormGroup></FormGroup>
+        <FormGroup></FormGroup>
+        <FormGroup></FormGroup>
+        <FormGroup></FormGroup>
+        <FormGroup></FormGroup>
+      </Form>
     </div>
   );
 }
