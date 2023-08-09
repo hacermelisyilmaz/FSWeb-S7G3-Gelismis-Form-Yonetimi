@@ -1,13 +1,13 @@
-import * as Yup from "yup";
-import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import { useState } from "react";
+import { Button, Form, FormGroup, Input, Label } from "reactstrap";
+import * as Yup from "yup";
 
-function FormComponent() {
+function FormComponent({ pAddUser }) {
   const emptyForm = {
     name: "",
     email: "",
     password: "",
-    terms: "",
+    terms: false,
   };
 
   const [formData, setFormData] = useState(emptyForm);
@@ -23,6 +23,7 @@ function FormComponent() {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    pAddUser(formData);
     setFormData(emptyForm);
   };
 
@@ -77,7 +78,7 @@ function FormComponent() {
             name="terms"
             type="checkbox"
             onChange={changeHandler}
-            value={formData.terms}
+            checked={!!formData.terms}
           ></Input>
           <Label>Kullanım şartlarını okudum, kabul ediyorum.</Label>
         </FormGroup>
