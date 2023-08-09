@@ -13,6 +13,14 @@ function FormComponent() {
   const [formData, setFormData] = useState(emptyForm);
   const [formErrors, setFormErrors] = useState(emptyForm);
 
+  const changeHandler = (event) => {
+    const { name, value, type, checked } = event.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
+
   const formSchema = Yup.object().shape({
     name: Yup.string(),
     email: Yup.string()
@@ -32,7 +40,11 @@ function FormComponent() {
       <Form>
         <FormGroup>
           <Label>İsim</Label>
-          <Input name="name" placeholder="İsim ve soyisminizi girin"></Input>
+          <Input
+            name="name"
+            placeholder="İsim ve soyisminizi girin"
+            onChange={changeHandler}
+          ></Input>
         </FormGroup>
         <FormGroup>
           <Label>E-mail</Label>
@@ -40,6 +52,7 @@ function FormComponent() {
             name="email"
             placeholder="E-mailinizi girin"
             type="email"
+            onChange={changeHandler}
           ></Input>
         </FormGroup>
         <FormGroup>
@@ -48,10 +61,11 @@ function FormComponent() {
             name="password"
             placeholder="Şifrenizi girin"
             type="password"
+            onChange={changeHandler}
           ></Input>
         </FormGroup>
         <FormGroup check>
-          <Input name="terms" type="checkbox"></Input>
+          <Input name="terms" type="checkbox" onChange={changeHandler}></Input>
           <Label>Kullanım şartlarını okudum, kabul ediyorum.</Label>
         </FormGroup>
         <FormGroup>
