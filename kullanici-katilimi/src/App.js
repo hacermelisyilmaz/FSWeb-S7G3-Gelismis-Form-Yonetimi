@@ -1,11 +1,11 @@
 import axios from "axios";
-import Form from "./components/Form.js";
+import FormComponent from "./components/FormComponent.js";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Form />
+      <FormComponent />
     </div>
   );
 }
