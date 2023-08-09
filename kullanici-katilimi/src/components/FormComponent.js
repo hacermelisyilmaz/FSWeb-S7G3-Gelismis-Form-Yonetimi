@@ -12,6 +12,7 @@ function FormComponent({ pAddUser }) {
 
   const [formData, setFormData] = useState(emptyForm);
   const [formErrors, setFormErrors] = useState(emptyForm);
+  const [isFormValid, setFormValid] = useState(false);
 
   const changeHandler = (event) => {
     const { name, value, type, checked } = event.target;
