@@ -44,6 +44,7 @@ function FormComponent() {
             name="name"
             placeholder="İsim ve soyisminizi girin"
             onChange={changeHandler}
+            value={formData.name}
           ></Input>
         </FormGroup>
         <FormGroup>
@@ -53,6 +54,7 @@ function FormComponent() {
             placeholder="E-mailinizi girin"
             type="email"
             onChange={changeHandler}
+            value={formData.email}
           ></Input>
         </FormGroup>
         <FormGroup>
@@ -62,10 +64,16 @@ function FormComponent() {
             placeholder="Şifrenizi girin"
             type="password"
             onChange={changeHandler}
+            value={formData.password}
           ></Input>
         </FormGroup>
         <FormGroup check>
-          <Input name="terms" type="checkbox" onChange={changeHandler}></Input>
+          <Input
+            name="terms"
+            type="checkbox"
+            onChange={changeHandler}
+            value={formData.terms}
+          ></Input>
           <Label>Kullanım şartlarını okudum, kabul ediyorum.</Label>
         </FormGroup>
         <FormGroup>
