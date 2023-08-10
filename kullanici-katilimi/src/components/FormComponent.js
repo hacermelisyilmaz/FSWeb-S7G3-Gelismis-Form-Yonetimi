@@ -104,6 +104,7 @@ function FormComponent() {
             onChange={changeHandler}
             value={formData.name}
             invalid={!!formErrors.name}
+            data-cy="name-input"
           ></Input>
           <FormFeedback>{formErrors.name}</FormFeedback>
         </FormGroup>
@@ -117,6 +118,7 @@ function FormComponent() {
             onChange={changeHandler}
             value={formData.email}
             invalid={!!formErrors.email}
+            data-cy="email-input"
           ></Input>
           <FormFeedback>{formErrors.email}</FormFeedback>
         </FormGroup>
@@ -130,6 +132,7 @@ function FormComponent() {
             onChange={changeHandler}
             value={formData.password}
             invalid={!!formErrors.password}
+            data-cy="password-input"
           ></Input>
           <FormFeedback>{formErrors.password}</FormFeedback>
         </FormGroup>
@@ -141,6 +144,7 @@ function FormComponent() {
             onChange={changeHandler}
             checked={!!formData.terms}
             invalid={!!formErrors.terms}
+            data-cy="terms-input"
           ></Input>
           <Label htmlFor="user-terms">
             Kullanım şartlarını okudum, kabul ediyorum.
@@ -148,7 +152,7 @@ function FormComponent() {
           <FormFeedback>{formErrors.terms}</FormFeedback>
         </FormGroup>
         <FormGroup>
-          <Button type="submit" disabled={!isFormValid}>
+          <Button type="submit" disabled={!isFormValid} data-cy="submit-button">
             Gönder
           </Button>
         </FormGroup>
