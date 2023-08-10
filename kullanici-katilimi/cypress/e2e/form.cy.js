@@ -27,4 +27,10 @@ describe("Submitable", () => {
     cy.get("[data-cy=name-input]").clear().type("Melis");
     cy.get("[data-cy=submit-button]").should("be.disabled");
   });
+
+  it("checks if submit button is disabled when password criteria is not met", () => {
+    cy.visit("/");
+    cy.get("[data-cy=password-input]").clear().type("123");
+    cy.get("[data-cy=submit-button]").should("be.disabled");
+  });
 });
