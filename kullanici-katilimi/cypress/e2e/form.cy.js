@@ -21,4 +21,10 @@ describe("Submitable", () => {
     cy.get("[data-cy=terms-input]").check();
     cy.get("[data-cy=submit-button]").should("not.be.disabled");
   });
+
+  it("checks if submit button is disabled when name is one word", () => {
+    cy.visit("/");
+    cy.get("[data-cy=name-input]").clear().type("Melis");
+    cy.get("[data-cy=submit-button]").should("be.disabled");
+  });
 });
